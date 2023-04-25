@@ -17,22 +17,25 @@ class book(BaseModel):
     _id:Optional[str]
     Title:str
     Autor:str
+    Genero:str
     Synopsys:str
-    Year:str
+    Year: int
     Pages: int
-    ISB: int
+    ISBN: int
     Editorial:str
 
     
 def bookEntity(book) -> dict:
     return {
             "_id":Optional[str(book["_id"])],
-            "bate":book["bate"],
-            "assessDate":book["assessDate"],
-            "value":book["value"],
-            "isCorrected":book["isCorrected"],
-            "modDate":book["modDate"],
-            "book":book["book"]
+            "Title":book["Title"],
+            "Autor":book["Autor"],
+            "Genero":book["Genero"],
+            "Synopsys":book["Synopsys"],
+            "Year":book["Year"],
+            "Pages": book["Pages"],
+            "ISBN": book["ISBN"],
+            "Editorial":book["Editorial"]
     }
     
 def booksEntity(entity) -> list:
